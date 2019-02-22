@@ -3,8 +3,8 @@ class CreateInvites < ActiveRecord::Migration[5.2]
     create_table :invites do |t|
       t.string :name
       t.string :host
-      t.smalldatetime :date
-      t.smalldatetime :time
+      t.date :date
+      t.time :time
       t.integer :phone_number
       t.string :location
       t.string :address
