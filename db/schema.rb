@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_061738) do
+ActiveRecord::Schema.define(version: 2019_02_27_031213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2019_02_25_061738) do
     t.string "host"
     t.date "date"
     t.time "time"
-    t.integer "phone_number"
     t.string "location"
     t.string "address"
     t.string "message"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_061738) do
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone_number"
     t.index ["design_id"], name: "index_invites_on_design_id"
     t.index ["event_id"], name: "index_invites_on_event_id"
     t.index ["user_id"], name: "index_invites_on_user_id"

@@ -1,5 +1,6 @@
 class Api::V1::InvitesController < ApplicationController
   before_action :find_invite, only:[:show, :update, :destroy]
+
   def index
     @invites = Invite.all
     render json: @invites
@@ -10,7 +11,7 @@ class Api::V1::InvitesController < ApplicationController
 
   def create
     @invite = Invite.create(invite_params)
-    if @invite.save
+    if @invite.valid?
       render json:@invite
     else
       render json: {errors: @invite.errors.full_messages}

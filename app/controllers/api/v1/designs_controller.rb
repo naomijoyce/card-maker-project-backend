@@ -12,7 +12,7 @@ class Api::V1::DesignsController < ApplicationController
 
   def create
     @design = Design.create(design_params)
-    if @design.save
+    if @design.valid?
       render json: @design
     else
       render json: {errors: @design.errors.full_messages}
