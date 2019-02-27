@@ -36,6 +36,6 @@ class Api::V1::DesignsController < ApplicationController
   end
 
   def design_params
-    params.permit(:title, :image, :user_id, :event_id)
+    params.require(:design).permit(:title, :image, :user_id, :event_id)
   end
 end

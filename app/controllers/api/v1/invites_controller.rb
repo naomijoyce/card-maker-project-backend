@@ -35,6 +35,6 @@ class Api::V1::InvitesController < ApplicationController
   end
 
   def invite_params
-    params.permit(:name, :host, :date, :time, :phone_number, :location, :address, :message, :user_id, :design_id, :event_id)
+    params.require(:invite).permit(:name, :host, :date, :time, :phone_number, :location, :address, :message, :user_id, :design_id, :event_id)
   end
 end
