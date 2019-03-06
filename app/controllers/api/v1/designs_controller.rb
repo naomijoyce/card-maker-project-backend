@@ -1,6 +1,6 @@
 class Api::V1::DesignsController < ApplicationController
   before_action :find_design, only:[:show, :update, :destroy]
-  skip_before_action :authorized, only: [:index]
+  skip_before_action :authorized, only: [:index, :show]
 
   def index
     @designs = Design.all
