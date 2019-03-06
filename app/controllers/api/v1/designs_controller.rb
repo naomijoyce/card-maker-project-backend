@@ -8,6 +8,7 @@ class Api::V1::DesignsController < ApplicationController
   end
 
   def show
+    render json: @design
   end
 
   def create
