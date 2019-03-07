@@ -3,10 +3,6 @@ class DesignSerializer < ActiveModel::Serializer
   belongs_to :event
   belongs_to :user
 
-  def event
-    {category: self.object.event.category}
-  end
-
   def user
     {
       id: self.object.user.id,
