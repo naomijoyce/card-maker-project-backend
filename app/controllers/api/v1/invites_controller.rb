@@ -7,6 +7,7 @@ class Api::V1::InvitesController < ApplicationController
   end
 
   def show
+    render json: @invite
   end
 
   def create
